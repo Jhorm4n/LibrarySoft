@@ -22,7 +22,7 @@ app.listen(port, () =>{
 
 //RUTAS DEL ADMINISTRADOR
 //Ruta de INDEX (LOGIN)
-app.get('/index', (req,res) =>{
+app.get('/', (req,res) =>{
     res.render('login', {
         nombre: 'login'
     })
