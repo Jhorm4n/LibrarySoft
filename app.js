@@ -9,8 +9,8 @@ app.use( express.static('public/assets'))
 //Motor de  la plantilla
 hbs.registerPartials(__dirname + '/views/partials', function (err) {})
 hbs.registerPartials(__dirname+ '/views/admin/partials',function(err) {})
-hbs.registerPartials(__dirname+ '/views/estudiante/partials',function(err) {})
-hbs.registerPartials(__dirname+ '/views/profesor/partials',function(err) {})
+hbs.registerPartials(__dirname+ '/views/student/partials',function(err) {})
+hbs.registerPartials(__dirname+ '/views/teacher/partials',function(err) {})
 app.set('view engine', 'hbs')
 app.set('views', __dirname + '/views')
 
@@ -20,7 +20,6 @@ app.listen(port, () =>{
    console.log(`Escuchando el puerto ${port}`)
 })
 
-//RUTAS DEL ADMINISTRADOR
 //Ruta de INDEX (LOGIN)
 app.get('/', (req,res) =>{
     res.render('login', {
@@ -36,6 +35,7 @@ app.get('/', (req,res) =>{
     })
  })
 
+//RUTAS DEL ADMINISTRADOR
 
  //Ruta de DASHBOARD
  app.get('/dashboard', (req,res) =>{
@@ -102,33 +102,33 @@ app.get('/', (req,res) =>{
 
  //RUTAS DE LOS PROFESORES
  app.get('/teacherinicio', (req,res) =>{
-    res.render('profesor/teacherInicio', {
-        nombre: 'teacherInicio'
+    res.render('teacher/inicio', {
+        nombre: 'inicio'
     })
  })
 
  app.get('/teacherprestamos', (req,res) =>{
-    res.render('profesor/teacherPrestamos', {
-        nombre: 'teacherPrestamos'
+    res.render('teacher/prestamos', {
+        nombre: 'prestamos'
     })
  })
 
  app.get('/teacherreservas', (req,res) =>{
-    res.render('profesor/teacherReservas', {
-        nombre: 'teacherReservas'
+    res.render('teacher/reservas', {
+        nombre: 'reservas'
     })
  })
 
  //RUTAS DE LOS ESTUDIANTES
  app.get('/studentinicio', (req,res) =>{
-    res.render('estudiante/studentInicio', {
-        nombre: 'studentInicio'
+    res.render('student/inicio', {
+        nombre: 'inicio'
     })
  })
 
  app.get('/studentprestamos', (req,res) =>{
-    res.render('estudiante/studentPrestamos', {
-        nombre: 'studentPrestamos'
+    res.render('student/prestamos', {
+        nombre: 'prestamos'
     })
  })
 
