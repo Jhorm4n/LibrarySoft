@@ -101,32 +101,32 @@ app.get('/', (req,res) =>{
  })
 
  //RUTAS DE LOS PROFESORES
- app.get('/teacherinicio', (req,res) =>{
+ app.get('/teacherInicio', (req,res) =>{
     res.render('teacher/inicio', {
         nombre: 'inicio'
     })
  })
 
- app.get('/teacherprestamos', (req,res) =>{
+ app.get('/teacherPrestamos', (req,res) =>{
     res.render('teacher/prestamos', {
         nombre: 'prestamos'
     })
  })
 
- app.get('/teacherreservas', (req,res) =>{
+ app.get('/teacherReservas', (req,res) =>{
     res.render('teacher/reservas', {
         nombre: 'reservas'
     })
  })
 
  //RUTAS DE LOS ESTUDIANTES
- app.get('/studentinicio', (req,res) =>{
+ app.get('/studentInicio', (req,res) =>{
     res.render('student/inicio', {
         nombre: 'inicio'
     })
  })
 
- app.get('/studentprestamos', (req,res) =>{
+ app.get('/studentPrestamos', (req,res) =>{
     res.render('student/prestamos', {
         nombre: 'prestamos'
     })

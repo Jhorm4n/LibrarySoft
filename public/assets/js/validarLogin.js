@@ -165,7 +165,7 @@
             
           getValidarEstudiante( documento.value , contraseña.value )
           .then( verificadoEstudiante => {
-              document.location.href='/studentinicio'
+              document.location.href='/studentInicio'
     
           })
 
